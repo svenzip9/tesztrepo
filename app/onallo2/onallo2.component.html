@@ -1,0 +1,46 @@
+<div class="container my-4">
+    <div class="row">
+        <div class="col-12">
+            <h1>Önálló 2</h1>
+
+            <h3>Tanulók</h3>
+            <div class="form-group">
+                <label class="form-label" for="nev">Név</label>
+                <input class="form-control" type="text" id="nev" [(ngModel)]="nev">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="kor">Kor</label>
+                <input class="form-control" type="text" id="kor"[(ngModel)]="kor">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="felveteldatum">Felvétel Dátum</label>
+                <input class="form-control" type="text" id="felveteldatum" [(ngModel)]="felveteldatum">
+            </div>
+
+            <button class="btn btn-primary my-4" (click)="felvetel();atlagKorSzamitas()">Felvétel</button>
+
+            <hr>
+
+            <table class="table table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Név</th>
+                        <th>Kor</th>
+                        <th>Felvétel Dátum</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let t of tanulok">
+                        <td>{{t.nev}}</td>
+                        <td>{{t.kor}}</td>
+                        <td>{{t.felvetelDatum}}</td>
+                    </tr>
+                </tbody>
+
+                <h4>Átlag életkor: {{atlagKor}}</h4>
+            </table>
+        </div>
+    </div>
+</div>

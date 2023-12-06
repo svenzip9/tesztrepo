@@ -1,0 +1,32 @@
+<div class="container my-4">
+    <div class="row">
+        <div class="col-12">
+            <h1>Objektum feltöltés</h1>
+
+            <div class="form-group">
+                <label class="form-label" for="rendszam">Rendszám</label>
+                <input class="form-control" type="text" id="rendszam" [(ngModel)]="rsz">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="gyarto">Gyártó</label>
+                <input class="form-control" type="text" id="gyarto"[(ngModel)]="gy">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="hengerurtartalom">Hengerűrtartalom</label>
+                <input class="form-control" type="text" id="hengerurtartalom" [(ngModel)]="hen">
+            </div>
+
+            <button class="btn btn-primary my-4" (click)="felvitel()">Felvitel</button>
+        </div>
+
+        <div class="col-12">
+            <ul>
+                <li *ngFor="let a of autok">
+                    {{a.rendszam}} {{a.gyarto}} {{a.hengerurtartalom}} ccn
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

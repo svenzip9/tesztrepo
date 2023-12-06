@@ -1,0 +1,62 @@
+<div class="container my-4">
+    <div class="row">
+        <div class="col-12">
+            <h1>Pipeok</h1>
+
+            <!-- | (AltGr + W) -->
+            <hr>
+            <h3>Szövegek</h3>
+            <p>Eredeti szöveg: {{mintaSzoveg}}</p>
+            <p>Lowercase: {{mintaSzoveg | lowercase}}</p>
+            <p>Uppercase: {{mintaSzoveg | uppercase}}</p>
+            <p>Titlecase: {{mintaSzoveg | titlecase}}</p>
+
+            <hr>
+
+            <h3>Számok</h3>
+            <p>Eredeti szám: {{mintaSzam}}</p>
+            <!--minimumEgeszjegyek.minimumTortJegyek-mayimumTortJegyek-->
+            <p>Tizedes érték nélkül: {{mintaSzam | number: '1.0-0'}} (n: 1.0-0)</p>
+            <p>Maximum 4 szám lehet: {{mintaSzam | number: '4.0-0'}} (n: 4.0-0)</p>
+            <p>Két tizedes szám kiíratása: {{mintaSzam | number: '1.0-2'}} (n: 1.0-2)</p>
+            <!-- 0.52556 >> 52.556% -->
+            <!-- 1.10665 >>110.665% -->
+            <p>Százalékos érték kiíratása: {{szazalekErtek | percent}} (percent)</p>
+            <p>Százalékos érték kiíratása 2: {{szazalekErtek2 | percent}} (percent)</p>
+            <p>Százalékos érték kiíratása: {{szazalekErtek | percent: '2.0-2'}} (percent: '2.0-2')</p>
+            <p>Százalékos érték kiíratása 2: {{szazalekErtek2 | percent: '1.0-2'}} (percent: '1.0-2')</p>
+
+            <h3>Valuta értékek</h3>
+            <p>{{valutaErtek | currency: 'USD'}}</p>
+            <p>{{valutaErtek | currency: 'EUR'}}</p>
+            <p>{{valutaErtek | currency: 'GBP'}}</p>
+            <p>{{valutaErtek | currency: 'HUF'}}</p>
+
+            <h3>Dátumok</h3>
+            <p>{{maiDatum | date: 'short'}}</p>
+            <p>{{maiDatum | date: 'long'}}</p>
+            <p>{{maiDatum | date: 'shortDate'}}</p>
+            <p>{{maiDatum | date: 'longDate'}}</p>
+            <p>{{maiDatum | date: 'shortTime'}}</p>
+            <p>{{maiDatum | date: 'longTime'}}</p>
+            <p>{{maiDatum | date: 'fullDate'}}</p>
+            <p>{{maiDatum | date: 'fullTime'}}</p>
+
+            <p>{{maiDatum | date: 'YY'}}</p>
+            <p>{{maiDatum | date: 'YYYY'}}</p>
+            <p>{{maiDatum | date: 'MM'}}</p>
+            <p>{{maiDatum | date: 'dd'}}</p>
+            <p>{{maiDatum | date: 'YYYY-MM-dd'}}</p>
+
+            <!-- 24 ÓRÁS -->
+            <p>{{maiDatum | date: 'HH'}}</p>
+            <!-- Amerikai idő formátum -->
+            <p>{{maiDatum | date: 'hh'}}</p>
+
+            <p>{{maiDatum | date: 'mm'}}</p>
+            <p>{{maiDatum | date: 'ss'}}</p>
+            <p>{{maiDatum | date: 'HH:mm:ss'}}</p>
+
+        </div>
+    </div>
+</div>

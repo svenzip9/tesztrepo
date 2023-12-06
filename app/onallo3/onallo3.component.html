@@ -1,0 +1,27 @@
+<div class="container my-4">
+    <div class="row">
+        <div class="col-12">
+            <h1>Önálló 3</h1>
+
+            <table class="table table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Név</th>
+                        <th>Kor</th>
+                        <th>Aktív</th>
+                        <th>Beíratkozás dátuma</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let t of tanulok">
+                        <td>{{t.nev}}</td>
+                        <td>{{t.kor}}</td>
+                        <td>{{t.aktiv ? "Igen":"Nem"}}</td>
+                        <td>{{t.beiratkozas | date: 'YYYY-MM-dd'}}</td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</div>

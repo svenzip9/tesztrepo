@@ -1,0 +1,29 @@
+<div class="container my-4">
+    <div class="row">
+        <h1>Databinding</h1>
+
+        <h3>Interpoláció</h3>
+        <p>{{interpolacio}}</p>
+
+        <hr>
+
+        <h3>Property binding</h3>
+        <a [href]="utvonal" [target]="celpont">
+            <img [src]="keplink" [alt]="cim" [title]="cim" [width]="meret">
+        </a>
+
+        <hr>
+
+        <h3>Event binding</h3>
+        <button type="button" class="btn btn-primary" (click)="uzenet()">Üzenet</button>
+
+        <hr>
+
+        <h3>Two-way binding</h3>
+        <label for="aOldal" class="from-label">Négyzet terület, kerület számítása (cm)</label>
+        <input [(ngModel)]="a" class="from-control" type="number" id="aOldal">
+        
+        <p>Az A oldalu négyzet kerülete: {{4 * a}}cm</p>
+        <p>Az A oldalú négyzet területe: {{a * a}}cm</p>
+    </div>
+</div>

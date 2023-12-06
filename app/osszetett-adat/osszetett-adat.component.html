@@ -1,0 +1,42 @@
+<div class="container my-4">
+    <div class="row">
+        <div class="col-12">
+            <h1>Összetett adat</h1>
+
+            <h3></h3>
+            <ul>
+                <li *ngFor="let elem of bevasarlolista">
+                    {{elem}}
+                </li>
+            </ul>
+
+            <hr>
+
+            <h3>Dolgozo objektum</h3>
+            <p>Nev: {{dolgozo.nev}}</p>
+            <p>Kor: {{dolgozo.kor}}</p>
+            <p>Aktiv: {{dolgozo.aktiv}}</p>
+
+            <hr>
+
+            <h3>Objektum tömb</h3>
+            <table class="table table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Név</th>
+                        <th>Kor</th>
+                        <th>Aktív</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let d of dolgozok">
+                        <td>{{d.nev}}</td>
+                        <td>{{d.kor}}</td>
+                        <td>{{(d.aktiv) ? "igen" : "nem"}}</td>
+                        <!-- (feltétel) ? igaz : hamis -->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

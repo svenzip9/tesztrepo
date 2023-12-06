@@ -1,0 +1,20 @@
+<div class="container my-4">
+    <div class="row">
+        <div class="col-12">
+            <h1>Önálló 1</h1>
+
+            <label class="form-label" for="elem">Elem felvétele a listába:</label>
+            <input [(ngModel)]="elem" class="form-control" type="text" id="elem">
+
+            <button class="btn btn-primary mt-2" (click)="felvitel()">Felvétel</button>
+        </div>
+        <div class="col-12">
+            <h2>Bevásárlólista Elemek</h2>
+            <ul>
+                <li *ngFor="let e of bevasarlolista">
+                    {{e}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
